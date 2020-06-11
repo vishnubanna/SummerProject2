@@ -1,0 +1,9 @@
+newspaper3k
+spacyss
+spacy-stanza
+stanza
+stanfordnlp
+youtube-dl
+SpeechRecognition
+nltk
+beautifulsoup4
