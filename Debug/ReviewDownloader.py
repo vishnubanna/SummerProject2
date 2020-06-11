@@ -146,7 +146,8 @@ def general_statistical(url, threshold):
         - maybe try a regression 
         - if not use a neral network with glove ideally it will use word similarity to find related texts
     """
-    nlp = load_model(group = None)
+    #nlp = load_model(group = None)
+    nlp = load_model()
     sent_splitter = load_sentence_splitter()
 
     text = urlopen(url)
@@ -248,9 +249,9 @@ def load_article(url):
     else:
         raise RuntimeError("unsupported website")
 
-if __name__ == "__main__":
-    methods = {"rogerebert", "cnn", "youtube"}
-    method_reader = {"rogerebert": [general_statistical, 30], "cnn": [general_statistical, 12], "youtube":[get_youtube, 10],"None": [general_library, None]}
+methods = {"rogerebert", "cnn", "youtube"}
+method_reader = {"rogerebert": [general_statistical, 30], "cnn": [general_statistical, 12], "youtube":[get_youtube, 10],"None": [general_library, None]}
 
-    text = load_article("https://variety.com/2014/film/reviews/telluride-film-review-the-imitation-game-1201294590/")
+if __name__ == "__main__":
+    text = load_article("https://www.rogerebert.com/reviews/you-dont-nomi-movie-review-2020")
     print(text)
