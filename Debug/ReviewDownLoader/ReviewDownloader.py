@@ -250,7 +250,7 @@ def load_article(url):
         raise RuntimeError("unsupported website")
 
 methods = {"rogerebert", "cnn", "youtube"}
-method_reader = {"rogerebert": [general_statistical, 30], "cnn": [general_statistical, 12], "youtube":[get_youtube, 10],"None": [general_library, None]}
+method_reader = {"rogerebert": [general_statistical, 15], "cnn": [general_statistical, 12], "youtube":[get_youtube, 10],"None": [general_library, None]}
 
 if __name__ == "__main__":
     text = load_article("https://www.rogerebert.com/reviews/you-dont-nomi-movie-review-2020")
