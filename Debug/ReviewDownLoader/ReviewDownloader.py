@@ -146,8 +146,8 @@ def general_statistical(url, threshold):
         - maybe try a regression 
         - if not use a neral network with glove ideally it will use word similarity to find related texts
     """
-    #nlp = load_model(group = None)
-    nlp = load_model()
+    nlp = load_model(group = None)
+    #nlp = load_model()
     sent_splitter = load_sentence_splitter()
 
     text = urlopen(url)
