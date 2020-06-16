@@ -306,8 +306,8 @@ def load_article(url):
 
 
 # wsj doesn't work fix me
-methods = {"guardian", "variety", "youtube", "rogerebert", "nytimes", "wsj"}
-method_reader = {"guardian": [general_library, None], "variety": [general_library, None], "youtube":[get_youtube, 10], "rogerebert": [general_statistical_ptag, 5], "nytimes": [general_statistical_ptag, 5], "None": [general_statistical, 15]}
+methods = {"guardian", "variety", "youtube", "rogerebert", "nytimes", "datebook"}
+method_reader = {"guardian": [general_library, None], "variety": [general_library, None], "youtube":[get_youtube, 10], "rogerebert": [general_statistical_ptag, 5], "nytimes": [general_statistical_ptag, 5], "cnn": [general_statistical, 12], "None": [general_library, None]}
 
 
 def CLI_run():
