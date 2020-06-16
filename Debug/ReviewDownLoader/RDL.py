@@ -329,12 +329,12 @@ def CLI_run():
             try: 
                 text = general_statistical_ptag(url, int(sys.argv[3]))
             except:
-                text = general_statistical_ptag(url, 15)
+                text = general_statistical_ptag(url, 0)
         elif sys.argv[2] == "general_statistical": 
             try:
                 text = general_statistical(url, int(sys.argv[3]))
             except: 
-                text = general_statistical(url, 15)
+                text = general_statistical(url, 0)
         elif sys.argv[2] == "get_youtube":
             text = get_youtube(url, 10)
         else:
