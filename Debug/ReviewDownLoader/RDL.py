@@ -304,7 +304,9 @@ def load_article(url):
     else:
         raise RuntimeError("unsupported website")
 
-methods = {"guardian", "variety", "youtube", "rogerebert", "nytimes"}
+
+# wsj doesn't work fix me
+methods = {"guardian", "variety", "youtube", "rogerebert", "nytimes", "wsj"}
 method_reader = {"guardian": [general_library, None], "variety": [general_library, None], "youtube":[get_youtube, 10], "rogerebert": [general_statistical_ptag, 5], "nytimes": [general_statistical_ptag, 5], "None": [general_statistical, 15]}
 
 
@@ -318,7 +320,8 @@ def CLI_run():
         raise RuntimeError("too few inputs -> input1 is the link -> input2 is the function -> input3 is the threshold (none if statistical method is not used)")
 
     url = sys.argv[1]
-    try:
+    print(len(sys.argv))
+    if (len(sys.argv) > 2):
         if sys.argv[2] == "general_library":
             text = general_library(url, None)
         elif sys.argv[2] == "general_statistical_ptag":   
@@ -335,8 +338,7 @@ def CLI_run():
             text = get_youtube(url, 10)
         else:
             text = load_article(url)
-        
-    except:
+    else:
         text = load_article(url)
 
     return text
